@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Transfer money to own account</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td><a href="main.html">Main</a></td>
+		<td><a href="logout.html">Logout</a></td>
+		<td><a href="see_account.html">See account</a></td>
+	</tr>
+</table>
+
+<h1>Transfer money to own account</h1>
+On this page you can transfer money between own accounts.<br />
+
+<form name="transfer_between_own" method="get" action="confirm_transfer_money_to_own_account.html">
+
+Select the account you want to transfer the money to.<br />
+<input type="radio" name="target_acc" value="acc1" />Account 1<br />
+<input type="radio" name="target_acc" value="acc2" />Account 2<br />
+<input type="radio" name="target_acc" value="acc3" />Account 3<br />
+
+Tipe in the amount of money you want to transfer.<br />
+<input type="text" name="amount" /><br />
+<input type="submit" value="Confirm" /><input type="reset" value="Cancel" /><br />
+</form>
+
+</body>
+</html>

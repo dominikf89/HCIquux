@@ -1,48 +1,49 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-       "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<head>Sparckleys - Standing Order</head>
+<title>New standing order</title>
 </head>
 <body>
-<ul>
-<li><a href="main.html">Main site</a></li>
-<li><a href="logout.html">Log out</a></li>
-</ul>
-<h1>New Standing Order</h1>
-
-<p>Source Account: $SOURCE<br>
-IBAN Number: $TARGET<br>
-</p>
-<form>
-<table width="50%" border="0" cellpadding="0" cellspacing="2">
- <tr>
-  <td>Beneficiary Name:</td>
-  <td><input name="b_name" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>Reference No.:</td>
-  <td><input name="r_no" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>Timeframe:</td>
-  <td><input name="t_frame" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>Beginning of Payment:</td>
-  <td><input name="p_start" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>End of Payment:</td>
-  <td><input name="p_end" type="text" size="50" maxlength="60"></td>
- </tr>
+<table>
+	<tr>
+		<td><a href="main.html">Main</a></td>
+		<td><a href="logout.html">Logout</a></td>
+		<td><a href="see_account.html">See account</a></td>
+		<td><a href=".html"></a></td>
+		<td><a href=".html"></a></td>
+		<td><a href=".html"></a></td>
+		<td><a href=".html"></a></td>
+	</tr>
 </table>
 
-</form>
-  <p></p>
+<h1>Create a new standing order</h1>
+Please fill in the following form:
 <form action="confirm_new_standing_order.html">
-<input type="button" name="save_new" value="Save New Standing Order" onclick="window.location.replace('confirm_new_standing_order.html')">
-<input type="button" name="cancel_new" value="Cancel" onclick="window.location.replace('list_standing_order.html')">
+<table>
+<tr>
+<td>Target account:</td>
+<td><select name="target_account">
+					<option value="acc1">Account1</option>
+					<option value="acc2">Account2</option>
+					</select>
+</td>
+</tr>
+<tr>
+<td>Interval:</td>
+<td><input type="radio" name="interval" value="monthly" />monthly</td>
+</tr>
+<tr>
+<td></td>
+<td><input type="radio" name="interval" value="dayinterval" />each <input type="text" name="dayinterval_value" size="6" />days</td>
+</td>
+</tr>
+<tr>
+<td>Amount of money:</td>
+<td><input type="text" name="amount" /></td>
+</tr>
+<tr>
+<td><input type="submit" value="confirm" /></td>
+</tr>
 </form>
+
 </body>
 </html>

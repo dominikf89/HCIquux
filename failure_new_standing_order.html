@@ -1,67 +1,21 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-       "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<head>Sparckleys - Transaction failed</head>
+<title>Create new standing order (failure)</title>
 </head>
 <body>
-<ul>
-<li><a href="main.html">Main site</a></li>
-<li><a href="logout.html">Log out</a></li>
-</ul>
-<h1>Failure!</h1>
-<p>The transaction could not be processed. This could have the following reasons: </p>
-<ul>
-<li>You somehow managed to bypass the cromulence-checks. Please cromulentify
-your input</li>
-<li>The source account lacks the required funds to execute this transaction.</li>
-<li>The database, webserver or scripts have malfunctioned. If the problem
-persists, please contact <a href="mailto:scriptweasel@sparkle.ys">our
-technical staff.</a></li>
-</ul>
+<table>
+	<tr>
+		<td><a href="main.html">Main</a></td>
+		<td><a href="logout.html">Logout</a></td>
+		<td><a href="see_account.html">See account</a></td>
+		<td><a href=".html"></a></td>
+		<td><a href=".html"></a></td>
+		<td><a href=".html"></a></td>
+		<td><a href=".html"></a></td>
+	</tr>
+</table>
 
-<h1>Please check your details to continue</h1>
+<h1>An error occured during creating the new standing order</h1>
 
-<p>Source Account: $SOURCE<br>
-IBAN Number: $TARGET<br>
-Reference No.: $REFERENCE
-</p>
-<h2>New Standing Order:</h2>
-
-<table width="50%" border="0" cellpadding="0" cellspacing="2">
- <tr>
-  <td>Beneficiary Name:</td>
-  <td><input name="b_name" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>Reference No.:</td>
-  <td><input name="r_no" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>Timeframe:</td>
-  <td><input name="t_frame" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>Beginning of Payment:</td>
-  <td><input name="p_start" type="text" size="50" maxlength="60"></td>
- </tr>
- <tr>
-  <td>End of Payment:</td>
-  <td><input name="p_end" type="text" size="50" maxlength="60"></td>
- </tr>
- </table>
- <br>
- <br>
-
- <form action="confirm_new_standing_order.html">
-<input type="button" name="save_new" value="Save New Standing Order" onclick="window.location.replace('success_new_standing_order.html')">
-<input type="button" name="cancel_new" value="Cancel" onclick="window.location.replace('list_standing_order.html')">
-</form>
-
-<p><a href="new_standing_order.html">Commission new Standing Order</a><br>
-<a href="edit_standing_order.html">Edit Standing Order</a><br>
-<a href="delete_standing_order.html">Delete Standing Order</a><br>
-<br><a href="see_account.html">Back to overview</a></p>
-<p><a href="see_account.html">Cancel and return to account</a></p>
 </body>
 </html>
