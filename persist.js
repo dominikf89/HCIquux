@@ -90,6 +90,23 @@ function init()
   configureforms();
 }
 
+function exists(requestedkey)
+{
+  for (var key in dynspace)
+  {
+    if (key==requestedkey)
+    {
+      return true;
+    }
+  } 
+  return false;
+}
+
+function get(requestedkey)
+{
+  return dynspace[requestedkey];
+}
+
 function showdynspace()
 {
   for(var key in dynspace)
@@ -121,7 +138,3 @@ function setvars(reference, location)
   document.URL = location + result; 
 }
 
-function wrangleform()
-{
-  
-}
