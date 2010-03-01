@@ -102,6 +102,13 @@ function exists(requestedkey)
   return false;
 }
 
+function set(requestedkey, value)
+{
+  dynspace[requestedkey] = value;
+  configurelinks();
+  configureforms();
+}
+
 function get(requestedkey)
 {
   return dynspace[requestedkey];
@@ -111,7 +118,44 @@ function insert(requestedkey)
 {
   var thegame = get(requestedkey);
   document.getElementById(requestedkey).innerHTML = thegame;
-  alert(thegame);
+  var temp = document.getElementsByTagName("input");
+  for(var i=0;i<temp.length;i++)
+  {
+    if(temp[i].name==requestedkey)
+    {
+      temp[i].value = thegame;
+    }
+  }
+}
+
+function setaccountselects(requestedname)
+{
+  var insert = new Array;
+  for(var i=0;i<7;i++)
+  {
+    if(get("Account"+i)!="")
+    {
+      var temp = document.createElement("option");
+      temp.appendChild(document.createTextNode(get("Account"+i)));
+      insert.push(temp);
+    }
+  }
+  var elem = document.getElementsByTagName("select");
+  for(i=0;i<elem.length;i++)
+  {
+    if(elem[i].name==requestedname)
+    {
+      var k = elem[i].childNodes.length;
+      for(var j=0; j<k;j++)
+      {
+        elem[i].removeChild(elem[i].firstChild);
+      }
+      for(var j=0; j<insert.length;j++)
+      {
+        elem[i].appendChild(insert[j]);
+      }
+    }
+  }
 }
 
 function showdynspace()
