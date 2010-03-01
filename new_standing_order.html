@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+       "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<head>Sparckleys - Standing Order</head>
+</head>
+<body>
+<ul>
+<li><a href="main.html">Main site</a></li>
+<li><a href="logout.html">Log out</a></li>
+</ul>
+<h1>New Standing Order</h1>
+
+<p>Source Account: $SOURCE<br>
+IBAN Number: $TARGET<br>
+</p>
+<form>
+<table width="50%" border="0" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>Beneficiary Name:</td>
+  <td><input name="b_name" type="text" size="50" maxlength="60"></td>
+ </tr>
+ <tr>
+  <td>Reference No.:</td>
+  <td><input name="r_no" type="text" size="50" maxlength="60"></td>
+ </tr>
+ <tr>
+  <td>Timeframe:</td>
+  <td><input name="t_frame" type="text" size="50" maxlength="60"></td>
+ </tr>
+ <tr>
+  <td>Beginning of Payment:</td>
+  <td><input name="p_start" type="text" size="50" maxlength="60"></td>
+ </tr>
+ <tr>
+  <td>End of Payment:</td>
+  <td><input name="p_end" type="text" size="50" maxlength="60"></td>
+ </tr>
+</table>
+
+</form>
+  <p></p>
+<form action="confirm_new_standing_order.html">
+<input type="button" name="save_new" value="Save New Standing Order" onclick="window.location.replace('confirm_new_standing_order.html')">
+<input type="button" name="cancel_new" value="Cancel" onclick="window.location.replace('list_standing_order.html')">
+</form>
+</body>
+</html>

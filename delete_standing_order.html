@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+       "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<head>Sparckleys - Standing Order</head>
+</head>
+<body>
+<ul>
+<li><a href="main.html">Main site</a></li>
+<li><a href="logout.html">Log out</a></li>
+</ul>
+<h1>Delete Standing Order</h1>
+
+<p>Source Account: $SOURCE<br>
+IBAN Number: $TARGET<br>
+</p>
+
+<h2>Please choose the Standing order you want to delete</h2>
+<table width="70%" border="1" cellpadding="5" cellspacing="1">
+ <tr>
+  <td width="3%">No.</td>
+  <td width="20%">Beneficiary Name</td>
+  <td width="15%">Reference</td>
+  <td width="10%">Status</td>
+  <td width="15%">Next Payment Amount</td>
+  <td width="15%">Next Payment Date</td>
+  <td width="3%">Select Standing Order</td>
+ </tr>
+ <tr>
+  <td><a href="new_standing_order.html">1</a></td>
+  <td>Abdo</td>
+  <td>1231337564</td>
+  <td>Active</td>
+  <td>GBP 200.000</td>
+  <td>01/03/2010</td>
+  <td><input type="radio" name="select"</td>
+ </tr>
+ <tr>
+ <td><a href="new_standing_order.html">2</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td><input type="radio" name="select"</td>
+ </tr>
+ <tr>
+  <td><a href="new_standing_order.html">3</a></td>
+  <td>Dominik Said</td>
+  <td>1234567890</td>
+  <td>Cancelled</td>
+  <td>GBP - 20.000</td>
+  <td>88/88/8888</td>
+  <td><input type="radio" name="select"</td>
+ </tr>
+</table>
+<p></p>
+<form action="delete_standing_order.html" method="get">
+<input type="button" name="del" value="delete" onclick="window.location.replace('confirm_deleting_standing_order.html')">
+<input type="button" name="cancel" value="cancel" onclick="window.location.replace('list_standing_order.html')">
+
+</form>
+<p><a href="new_standing_order.html">Commission new Standing Order</a><br>
+<a href="edit_standing_order.html">Edit Standing Order</a><br>
+<a href="delete_standing_order.html">Delete Standing Order</a><br>
+<br><a href="see_account.html">Back to overview</a></p>
+</body>
+</html>
