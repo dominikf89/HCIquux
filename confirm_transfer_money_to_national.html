@@ -3,8 +3,9 @@
 <html>
 <head>
 <head>Sparckleys - Confirm Transferring money to a national account</head>
+<script src="./persist.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="init();insert('src');insert('tgt');insert('sort');insert('amnt');insert('comment');">
 <ul>
 <li><a href="main.html">Main site</a></li>
 <li><a href="logout.html">Log out</a></li>
@@ -14,18 +15,19 @@
 confirmed this, there will be no way to undo the transaction. If some of the
 informations are not correct, please use the form below to correct it.</p>
 <p>
-<form method="get">
-Destination Account: <br>
-Sort Code: <br>
-Amount: <br>
-Comment: <br>
+<form method="get" action="success_transfer_money_to_national.html" name="wft">
+Source Account: <div id="src">Please allow JavaScript</div><br>
+Destination Account: <div id="tgt">Please allow JavaScript</div><br>
+Sort Code: <div id="sort">Please allow JavaScript</div><br>
+Amount: <div id="amnt">Please allow JavaScript</div><br>
+Comment: <div id="comment">Please allow JavaScript</div><br>
 <input type="submit" value="Confirm"></form></p>
 <a href="success_transfer_money_to_national.html"><img src="success.gif"></a>
 <a href="failure_transfer_money_to_national.html"><img src="failure.gif"></a>
 
 <p>If the information displayed above is not correct, please correct it
 here.</p>
-<form>
+<form method="get" action="confirm_transfer_money_to_national.html" name="fsck">
 Source Account: <select name="src">
 <option>Quux</option>
 <option>Kiu</option>

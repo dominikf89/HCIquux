@@ -3,6 +3,7 @@
 <html>
 <head>
 <head>Sparckleys - National transanction</head>
+<script src="./persist.js" type="text/javascript"></script>
 </head>
 <body>
 <ul>
@@ -15,13 +16,13 @@ will process the transaction. Please allow one or two days before the
 recipient receives the money. This delay is system-immanent and beyond our 
 control.</p>
 <p><a href="see_account.html">Cancel and back to overview</a></p>
-<form>
+<form method="get" action="confirm_transfer_money_to_national.html">
 Source Account: <select name="src">
 <option>Quux</option>
 <option>Kiu</option>
 <option>Foo</option>
 <option>Bar</option></select><br>
-Destination Account: <input name="dst" type="text" size="30" maxlength="30" value=""><br>
+Destination Account: <input name="tgt" type="text" size="30" maxlength="30" value=""><br>
 Sort Code: <input name="sort" type="text" size="30" maxlength="30" value=""><br>
 Amount: <input name="amnt" type="text" size="30" maxlength="30" value=""><br>
 Comment: <input name="comment" type="text" size="30" maxlength="30" value=""><br>

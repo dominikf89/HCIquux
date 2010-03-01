@@ -19,29 +19,29 @@ function parameterize()
 
 function configureforms()
 {
-  for(var form in document.forms)
+  var insert = "";
+  for (var variable in dynspace)
   {
-    var insert = "";
-    for (var variable in dynspace)
+    if(dynspace[variable]!="")
     {
-      if(dynspace[variable]!="")
-      {
-        insert += '<input type="hidden" name="'+variable+'" value="'+dynspace[variable] +'">';
-      }
+      insert += '<input type="hidden" name="'+variable+'" value="'+dynspace[variable] +'">';
     }
-    var elem = document.createElement("div");
-    elem.innerHTML = insert; //Fz1iz2 tLvLz rzuzmL
-    document.forms[form].appendChild(elem);
+  }
+  var elem = document.createElement("div");
+  elem.innerHTML = insert; //Fz1iz2 tLvLz rzuzmL
+  var allforms = document.getElementsByTagName("form");
+  for (var i=0; i<allforms.length; i++)
+  {
+    allforms[i].appendChild(elem);
   }
 }
 
 function configurelinks()
 {
   uri = parameterize();
-  for(var link in document.links)
+  for(var foo in document.links)
   {
-    document.links[link].href = document.links[link].href + uri;
-//    document.write(document.links[link]);
+    document.links[foo].href = document.links[foo].href + uri;
   }
 }
 
@@ -105,6 +105,13 @@ function exists(requestedkey)
 function get(requestedkey)
 {
   return dynspace[requestedkey];
+}
+
+function insert(requestedkey)
+{
+  var thegame = get(requestedkey);
+  document.getElementById(requestedkey).innerHTML = thegame;
+  alert(thegame);
 }
 
 function showdynspace()
